@@ -1,0 +1,33 @@
+{
+    "name": "Armor - antiHoneyPot",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Armor反蜜罐",
+    "icons": {
+        "128": "/img/bee.png"
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Armor - antiHoneyPot",
+        "default_icon": "/img/bee.png"
+    },
+    "background": {
+        "persistent": true,
+        "scripts": [
+            "background.js",
+            "thirdParty/jquery-3.5.1.min.js"
+        ]
+    },
+    "permissions": [
+        "notifications",
+        "activeTab",
+        "tabs",
+        "storage",
+        "https://*/*",
+        "http://*/*",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+    "web_accessible_resources": ["*"],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
